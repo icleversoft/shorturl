@@ -134,7 +134,7 @@ class ShortURL
       s.ssl    = true
       s.action = "/v3/shorten/"
       require 'yaml'
-      creds = YAML.load(File.read(File.join(ENV["HOME"],"/.shorturl")))['bitly']
+      creds = YAML.load(File.read(File.join(ENV["PWD"],"/.shorturl")))['bitly']
       username = creds['username'] 
       key = creds['key'] 
       s.field  = "format=txt&login=#{username}&apiKey=#{key}&longUrl"
